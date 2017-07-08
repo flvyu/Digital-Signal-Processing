@@ -76,7 +76,7 @@ public class Wave {
 		for (int i = 0; i < left.length; i++) {
 			StdDraw.setPenColor(StdDraw.BLUE);
 			StdDraw.circle(i, Math.abs(left[i]) * 3, Math.abs(left[i] * 5));
-			StdDraw.setPenColor(StdDraw.RED);
+			StdDraw.setPenColor(StdDraw.GREEN);
 			StdDraw.circle(i, -Math.abs(right[i]) * 3, Math.abs(right[i] * 5));
 		}
 		StdDraw.setPenColor(StdDraw.BLUE);
