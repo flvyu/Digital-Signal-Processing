@@ -2,7 +2,7 @@
 
 
 /**********************************************************************************
- *  Author        Flavio Andrade
+ *  
  *  Compilation:  javac -cp .:stdplayer.jar EchoFilter.java
  *  Execution:    java  -cp .:stdplayer.jar EchoFilter songs/pearlharbor.mp3  delay
  *  Dependencies: Wave.java
@@ -27,7 +27,7 @@ public class EchoFilter {
 		int delay = Integer.parseInt(args[1]);
 		Wave[] last_x = new Wave[delay];
 		int step = 0;
-        while (!StdPlayer.isEmpty()) {
+		while (!StdPlayer.isEmpty()) {
 			if (last_x[delay - 1] == null) {
 				for (int i = 0; i < delay; i++) {
 					double[] left  = StdPlayer.getLeftChannel();
@@ -39,13 +39,13 @@ public class EchoFilter {
 			double[] left  = StdPlayer.getLeftChannel();
 			double[] right = StdPlayer.getRightChannel();
 			Wave w = new Wave(left, right);
-            Wave echo = last_x[step].plus(w);
+			Wave echo = last_x[step].plus(w);
 			echo.play();
 			last_x[step] = w;
 			if (step == delay - 1) { step = 0; }
 			else { step++; }
-        }
-        StdPlayer.close();
-        System.exit(0);
+		}
+		StdPlayer.close();
+		System.exit(0);
 	}
 }
