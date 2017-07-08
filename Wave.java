@@ -1,5 +1,5 @@
 /**********************************************************************************
- *  Author        Flavio Andrade
+ *  
  *  Compilation:  javac -cp .:stdplayer.jar Wave.java
  *  Execution:    java  -cp .:stdplayer.jar Wave
  *  Dependencies: Wave.java
@@ -25,7 +25,7 @@ public class Wave {
 	public Wave(double hz, double seconds, double ampl) {
 		N = (int) (SPS * seconds);
 		duration = seconds;
-        hertz = hz;
+                hertz = hz;
 		amplitude = ampl;
 		left = new double[N];
 		right = new double[N];
@@ -72,7 +72,7 @@ public class Wave {
 		StdDraw.setPenColor(StdDraw.BLUE);
 		StdDraw.text(200, 260, "Blue: LEFT CHANNEL");
 		StdDraw.setPenColor(StdDraw.GREEN);
-	    StdDraw.text(225, 200, "Green: RIGHT CHANNEL");
+	        StdDraw.text(225, 200, "Green: RIGHT CHANNEL");
 		for (int i = 0; i < left.length; i++) {
 			StdDraw.setPenColor(StdDraw.BLUE);
 			StdDraw.circle(i, Math.abs(left[i]) * 3, Math.abs(left[i] * 5));
@@ -96,7 +96,7 @@ public class Wave {
 		StdDraw.setXscale(-30, 1182);
 		StdDraw.setYscale(-yscale, yscale);
 		String filename = args[0];
-        StdPlayer.open(filename);
+                StdPlayer.open(filename);
 		int i = 1;
 		while (!StdPlayer.isEmpty()) {
 			Wave wave = new Wave(StdPlayer.getLeftChannel(), StdPlayer.getRightChannel());
