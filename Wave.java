@@ -53,7 +53,7 @@ public class Wave {
 			else {
 				this_left[i] = left[i] + b.left[i];
 			}
-			if ((right[i] + b.right[i]) > 1 || (right[i] + b.right[i]) < - 1) {
+			if ((right[i] + b.right[i]) > 1 || (right[i] + b.right[i]) < -1) {
 				this_right[i] = Math.sin(right[i] + b.right[i]);
 			}
 			else {
